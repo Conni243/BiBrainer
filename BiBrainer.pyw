@@ -97,7 +97,6 @@ def openfile():                                         #used for opening a Bibi
             json = js.load(file)
     except Exception:
         messagebox.showerror('Couldn\'t open!', 'BiBrainer has failed to open this file. if you think this is a bug please report this (and steps to reproduce) to the Creator!')
-        openfile()
 
 def savebibite():                                       #used for saving a Bibite File
     global json
