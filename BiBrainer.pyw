@@ -22,7 +22,7 @@ def addnode(widget):    #is used for adding new neurons
     neuronname = simpledialog.askstring(title="Name Neuron", prompt="What should the neuron be called?")
     widget.insert(widget.size(), str(len(json["brain"]["Nodes"])) + ": " + str(neuronname))
     nodemode = simpledialog.askinteger(title="Set the Neuron's mode", prompt="Choose from one of the modes 2-7 (1 is reserved for Input Neurons)") - 1
-    if(nodemode < 1 | nodemode > 6):
+    if(nodemode < 1 | nodemode > 10):
         messagebox.showerror('Invalid Neuron!', 'Not a valid Neuron function, defaulting to 1')
         nodemode = 1
     newnode = {
@@ -97,7 +97,6 @@ def openfile():                                         #used for opening a Bibi
             json = js.load(file)
     except Exception:
         messagebox.showerror('Couldn\'t open!', 'BiBrainer has failed to open this file. if you think this is a bug please report this (and steps to reproduce) to the Creator!')
-        openfile()
 
 def savebibite():                                       #used for saving a Bibite File
     global json
